@@ -1,0 +1,12 @@
+services: 
+    web:
+        build: ./presentation
+        ports:
+         - "8080:8080"
+        links:
+         - "db:sqlsi2021"
+    db:
+        build: ./data
+        ports:
+         - "8083:3306"
+        
