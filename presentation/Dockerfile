@@ -5,17 +5,17 @@ MAINTAINER Hoang Nguyen "ngpbhoang1406@gmail.com"
 
 # Adding application layer: SQLSI web-archive
 # To test : http://localhost:8080/sqlsirest/
-COPY https://github.com/SE-at-VGU/SQLSI/releases/download/SNCS2021/sqlsirest.war /usr/local/tomcat/webapps/
+ADD https://github.com/SE-at-VGU/SQLSI/releases/download/SNCS2021/sqlsirest.war /usr/local/tomcat/webapps/
 
 # Adding presentation layer: SQLSI Website interface
 # To test : http://localhost:8080/sqlsi/
 RUN mkdir /usr/local/tomcat/webapps/sqlsi
-COPY https://github.com/npbhoang/SQLSI-FDSE20/releases/download/SNCS2021/index.html /usr/local/tomcat/webapps/sqlsi
-COPY https://github.com/npbhoang/SQLSI-FDSE20/releases/download/SNCS2021/sqlsi.js /usr/local/tomcat/webapps/sqlsi
-COPY https://github.com/npbhoang/SQLSI-FDSE20/releases/download/SNCS2021/styles.css /usr/local/tomcat/webapps/sqlsi
-COPY https://github.com/npbhoang/SQLSI-FDSE20/releases/download/SNCS2021/elm-logo.svg /usr/local/tomcat/webapps/sqlsi
-COPY https://github.com/npbhoang/SQLSI-FDSE20/releases/download/SNCS2021/styles.css /usr/local/tomcat/webapps/sqlsi
-COPY https://github.com/npbhoang/SQLSI-FDSE20/releases/download/SNCS2021/favicon.png /usr/local/tomcat/webapps/sqlsi
+ADD https://github.com/npbhoang/SQLSI-FDSE20/releases/download/SNCS2021/index.html /usr/local/tomcat/webapps/sqlsi
+ADD https://github.com/npbhoang/SQLSI-FDSE20/releases/download/SNCS2021/sqlsi.js /usr/local/tomcat/webapps/sqlsi
+ADD https://github.com/npbhoang/SQLSI-FDSE20/releases/download/SNCS2021/styles.css /usr/local/tomcat/webapps/sqlsi
+ADD https://github.com/npbhoang/SQLSI-FDSE20/releases/download/SNCS2021/elm-logo.svg /usr/local/tomcat/webapps/sqlsi
+ADD https://github.com/npbhoang/SQLSI-FDSE20/releases/download/SNCS2021/styles.css /usr/local/tomcat/webapps/sqlsi
+ADD https://github.com/npbhoang/SQLSI-FDSE20/releases/download/SNCS2021/favicon.png /usr/local/tomcat/webapps/sqlsi
 
 # Run Tomcat catalina shell
 CMD ["catalina.sh", "run"]
